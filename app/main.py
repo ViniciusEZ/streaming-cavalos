@@ -1,7 +1,7 @@
-from database_user.user import iscpfvalid, collect_info
-from database_user.db import connect, select, insert_sql
+from app.database_user.db import insert_sql, connect, select
+from app.database_user.user import collect_info, iscpfvalid
 
-con = connect('streaming.db')
+con = connect('app/streaming.db')
 
 baseurl = 'https://viacep.com.br/ws/'
 endpoint = '/json/'
