@@ -131,4 +131,4 @@ dmypy.json
 # Pycharm
 *.iml
 *.xml
-.idea
+*.idea
