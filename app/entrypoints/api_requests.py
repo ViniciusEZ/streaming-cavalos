@@ -4,8 +4,8 @@ import re
 
 def get_cep_infos(baseurl, endpoint, midpoint):
     while iscepvalid(midpoint):
-        print('Invalid cep (Only numbers and no punctuation)')
-        user = input('Type again: ')
+        print('CEP inválido (apenas números).')
+        user = input('Digite novamente: ')
         if not iscepvalid(user):
             midpoint = user
             break
@@ -13,8 +13,8 @@ def get_cep_infos(baseurl, endpoint, midpoint):
             continue
 
     while cepnotfound(baseurl, endpoint, midpoint):
-        print('Cep not found')
-        user = input('Type again: ')
+        print('CEP não encontrado.')
+        user = input('Digite novamente: ')
         midpoint = user
         if not cepnotfound(baseurl, endpoint, midpoint):
             break

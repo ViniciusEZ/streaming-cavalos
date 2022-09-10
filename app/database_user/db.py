@@ -17,3 +17,5 @@ def select(vcon, user, passcode):
     connection.execute(f'SELECT nome, sobrenome FROM UserData WHERE usuario=? and senha=?', (user, passcode))
     res = connection.fetchall()
     return res
+
+
